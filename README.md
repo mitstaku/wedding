@@ -55,10 +55,10 @@
 
 ## guests テーブル
 
-| Column             | Type   | Options                  |
-| ------------------ | ------ | ------------------------ |
-| event_version_id   | string | null: false, foreign_key: true|
-| count              | string | null: false |
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| event_version      | references | null: false, foreign_key: true|
+| count              | string     | null: false                   |
 
 ### Association
 
@@ -68,10 +68,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| wedding_id        | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| wedding_id        | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -81,10 +81,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| food_id           | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| food_id           | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -94,10 +94,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| venue_id          | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| venue_id          | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -107,10 +107,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| costume_id        | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| costume_id        | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -120,7 +120,7 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
+| event_version     | references | null: false, foreign_key: true |
 | beauty_id         | integer    | null: false                    |
 | detail            | text       | null: false                    |
 | cost              | decimal    | null: false                    |
@@ -133,10 +133,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| flower_id         | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| flower_id         | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -146,10 +146,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| print_id          | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| print_id          | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -159,10 +159,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| staging_id        | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| staging_id        | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -172,10 +172,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| photo_id          | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| photo_id          | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -185,10 +185,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| video_id          | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| video_id          | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -198,10 +198,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| gift_id           | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| gift_id           | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
@@ -211,10 +211,10 @@
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
-| event_version_id  | references | null: false, foreign_key: true |
-| pre_wedding_id    | integer    | null: false                    |
-| detail            | text       | null: false                    |
-| cost              | decimal    | null: false                    |
+| event_version     | references | null: false, foreign_key: true |
+| pre_wedding_id    | integer    |                                |
+| detail            | text       |                                |
+| cost              | decimal    |                                |
 
 ### Association
 
