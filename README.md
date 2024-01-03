@@ -66,12 +66,12 @@
 
 - belongs_to :event_version
 
-## weddings テーブル
+## ceremony テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | event_version     | references | null: false, foreign_key: true |
-| wedding_id        | integer    |                                |
+| ceremony_id       | integer    |                                |
 | detail            | text       |                                |
 | cost              | decimal    |                                |
 
