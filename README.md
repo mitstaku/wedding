@@ -20,6 +20,8 @@
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | user_id           | references | null: false, foreign_key: true |
+| name              | string     | null: false                    |
+| event_date        | date       | null: false                    |
 
 ### Association
 
