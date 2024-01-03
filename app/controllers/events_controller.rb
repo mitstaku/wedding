@@ -13,11 +13,14 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.build(event_params)
     if @event.save
-      redirect_to @event, notice: 'イベントが正常に作成されました。'
+      redirect_to new_event_event_version_path(event_id: @event.id)
     else
       puts @event.errors.full_messages
       render :new
     end
+  end
+
+  def show
   end
 
   def edit
