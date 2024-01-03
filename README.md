@@ -58,7 +58,8 @@
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
 | event_version      | references | null: false, foreign_key: true|
-| count              | string     | null: false                   |
+| adult_count        | string     | null: false                   |
+| child_count        | string     | null: false                   |
 
 ### Association
 
