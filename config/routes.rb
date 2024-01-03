@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "events#index"
 
-  resources :events
-  
+  resources :events do
+    resources :event_versions
+  end
 end

@@ -1,0 +1,2 @@
+class EventVersion < ApplicationRecord
+end
