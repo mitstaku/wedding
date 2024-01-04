@@ -17,4 +17,7 @@ document.addEventListener('turbolinks:load', function() {
   document.querySelectorAll('.event-cost-input').forEach(function(input) {
     input.addEventListener('input', updateTotalCost);
   });
+
+  // 初期ロード時にも合計を更新
+  updateTotalCost();
 });

@@ -1,5 +1,4 @@
 class EventVersionsController < ApplicationController
-  
   def new
     @event = Event.find(params[:event_id])
     @event_form = EventForm.new
@@ -20,6 +19,6 @@ class EventVersionsController < ApplicationController
 
   def event_form_params
     params.require(:event_form).permit(:version_number, :details, :cost, :input_date, :ceremony_id, :detail)
-    .merge(event_id: params[:event_id])
+          .merge(event_id: params[:event_id])
   end
 end

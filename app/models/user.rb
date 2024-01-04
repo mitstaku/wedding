@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :events
 
   validates :password, format: {
-  with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
+    with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
   }
   validates :name, presence: true
 end

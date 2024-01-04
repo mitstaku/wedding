@@ -37,7 +37,7 @@ class EventsController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-  
+
   def destroy
     if @event.user_id == current_user.id
       @event.destroy
@@ -47,14 +47,13 @@ class EventsController < ApplicationController
     end
   end
 
-
   private
-    def set_event
-      @event = Event.find(params[:id])
-    end
 
-    def event_params
-      params.require(:event).permit(:name, :event_date)
-    end
-    
+  def set_event
+    @event = Event.find(params[:id])
+  end
+
+  def event_params
+    params.require(:event).permit(:name, :event_date)
+  end
 end

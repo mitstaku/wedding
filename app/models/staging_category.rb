@@ -3,7 +3,7 @@ class StagingCategory < ActiveHash::Base
     { id: 1, name: '著作権等使用料' },
     { id: 2, name: '司会者' },
     { id: 3, name: '席次表' },
-    { id: 4, name: 'プロジェクションマッピング' },
+    { id: 4, name: 'プロジェクションマッピング' }
   ]
   include ActiveHash::Associations
   has_many :staging_items
