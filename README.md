@@ -66,7 +66,7 @@
 
 - belongs_to :event_version
 
-## ceremony テーブル
+## ceremonies テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
@@ -209,12 +209,12 @@
 
 - belongs_to :event_version
 
-## pre_weddings テーブル
+## pre_ceremonies テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | event_version     | references | null: false, foreign_key: true |
-| pre_wedding_id    | integer    |                                |
+|   _id   | integer    |                                |
 | detail            | text       |                                |
 | cost              | decimal    |                                |
 
