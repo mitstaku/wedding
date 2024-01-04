@@ -1,4 +1,4 @@
-class VeuneCategory < ActiveHash::Base
+class VenueCategory < ActiveHash::Base
   self.data = [
     { id: 1, name: '会場使用料' },
     { id: 2, name: 'ウェイティングルーム' },
@@ -6,5 +6,5 @@ class VeuneCategory < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :venue
+  has_many :venues
 end

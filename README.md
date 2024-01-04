@@ -214,7 +214,7 @@
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | event_version     | references | null: false, foreign_key: true |
-|   _id   | integer    |                                |
+| pre_ceremony_id   | integer    |                                |
 | detail            | text       |                                |
 | cost              | decimal    |                                |
 
