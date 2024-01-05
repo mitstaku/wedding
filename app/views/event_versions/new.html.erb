@@ -13,17 +13,17 @@
         <div class="event-name-label">
           ゲスト人数（大人）
         </div>
-        <%= f.text_area :adult_guests, class:"event-name-input", id:"adult_guests-input", placeholder:"大人の参加人数を入力", maxlength:"40" %>
+        <%= f.text_field :adult_count, class:"event-name-input", id:"adult_count-input", placeholder:"大人の参加人数を入力", maxlength:"40" %>
         <div class="event-name-label">
           ゲスト人数（子供）
         </div>
-        <%= f.text_area :child_guests, class:"event-name-input", id:"child_guests-input", placeholder:"子供の参加人数を入力", maxlength:"40" %>
+        <%= f.text_field :child_count, class:"event-name-input", id:"child_count-input", placeholder:"子供の参加人数を入力", maxlength:"40" %>
 
         <%# 挙式 %>
         <div class="event-name-label">
           挙式
         </div>
-        <%= f.collection_select(:ceremony_id, CeremonyCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"ceremony-category"}) %>
+        <%= f.collection_select(:ceremony_category_id, CeremonyCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"ceremony-category"}) %>
         <div class="event-cost-label">
           挙式の費用
         </div>
@@ -38,7 +38,7 @@
         <div class="event-name-label">
           料理
         </div>
-        <%= f.collection_select(:food_id, FoodCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"food-category"}) %>
+        <%= f.collection_select(:food_category_id, FoodCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"food-category"}) %>
         <div class="event-cost-label">
           料理の費用
         </div>
@@ -53,7 +53,7 @@
         <div class="event-name-label">
           会場
         </div>
-        <%= f.collection_select(:venue_id, VenueCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"venue-category"}) %>
+        <%= f.collection_select(:venue_category_id, VenueCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"venue-category"}) %>
         <div class="event-cost-label">
           会場の費用
         </div>
@@ -61,14 +61,14 @@
         <div class="event-detail-label">
           備考
         </div>
-        <%= f.text_area :venues_detail, class: "event-detail-input", id: "venue-detail-input", placeholder: "備考" %>
+        <%= f.text_area :venue_detail, class: "event-detail-input", id: "venue-detail-input", placeholder: "備考" %>
         
 
         <%# 衣装 %>
         <div class="event-name-label">
           衣装
         </div>
-        <%= f.collection_select(:costume_id, CostumeCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"costume-category"}) %>
+        <%= f.collection_select(:costume_category_id, CostumeCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"costume-category"}) %>
         <div class="event-cost-label">
           衣装の費用
         </div>
@@ -83,7 +83,7 @@
         <div class="event-name-label">
            美容
         </div>
-        <%= f.collection_select(:beauty_id, BeautyCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"beauty-category"}) %>
+        <%= f.collection_select(:beauty_category_id, BeautyCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"beauty-category"}) %>
         <div class="event-cost-label">
           美容の費用
         </div>
@@ -91,14 +91,14 @@
         <div class="event-detail-label">
           備考
         </div>
-        <%= f.text_area :ceremony_detail, class: "event-detail-input", id: "beauty-detail-input", placeholder: "備考" %>
+        <%= f.text_area :beauty_detail, class: "event-detail-input", id: "beauty-detail-input", placeholder: "備考" %>
         
 
         <%# 装花 %>
         <div class="event-name-label">
           装花
         </div>
-        <%= f.collection_select(:flower_id, FlowerCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"flower-category"}) %>
+        <%= f.collection_select(:flower_category_id, FlowerCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"flower-category"}) %>
         <div class="event-cost-label">
           装花の費用
         </div>
@@ -113,7 +113,7 @@
         <div class="event-name-label">
           印刷物
         </div>
-        <%= f.collection_select(:print_id, PrintCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"print-category"}) %>
+        <%= f.collection_select(:print_category_id, PrintCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"print-category"}) %>
         <div class="event-cost-label">
           印刷物の費用
         </div>
@@ -128,7 +128,7 @@
         <div class="event-name-label">
           演出
         </div>
-        <%= f.collection_select(:staging_id, StagingCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"staging-category"}) %>
+        <%= f.collection_select(:staging_category_id, StagingCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"staging-category"}) %>
         <div class="event-cost-label">
           演出の費用
         </div>
@@ -143,7 +143,7 @@
         <div class="event-name-label">
           写真
         </div>
-        <%= f.collection_select(:photo_id, PhotoCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"photo-category"}) %>
+        <%= f.collection_select(:photo_category_id, PhotoCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"photo-category"}) %>
         <div class="event-cost-label">
           写真の費用
         </div>
@@ -158,7 +158,7 @@
         <div class="event-name-label">
           ビデオ
         </div>
-        <%= f.collection_select(:video_id, VideoCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"video-category"}) %>
+        <%= f.collection_select(:video_category_id, VideoCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"video-category"}) %>
         <div class="event-cost-label">
           ビデオの費用
         </div>
@@ -173,7 +173,7 @@
         <div class="event-name-label">
           引出物
         </div>
-        <%= f.collection_select(:gift_id, GiftCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"gift-category"}) %>
+        <%= f.collection_select(:gift_category_id, GiftCategory.all, :id, :name, { prompt: "選択してください" }, {class:"select-box", id:"gift-category"}) %>
         <div class="event-cost-label">
           引出物の費用
         </div>
